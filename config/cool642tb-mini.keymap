@@ -79,6 +79,21 @@
             bindings = <&kp SEMI>, <&kp APOS>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
+        // Add N2, N6
+        jis_semi: jis_N2 {  // 2 (same) / @ → LBKT
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp N2>, <&kp LBKT>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        jis_semi: jis_N6 {  // 6 (same) / ^ → EQUAL
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp N2>, <&kp EQUAL>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
     };
     
      
@@ -156,8 +171,8 @@
 
         JIS_NUM { // 7: auto-activated via conditional_layers;
             bindings = <
-&kp ESC              &kp N1           &kp N2  &kp N3  &jis_minus                                &jis_grave    &jis_apos   &jis_semi  &kp LS(APOS)      &kp LS(INT3)
-&mt LEFT_CONTROL N0  &kp N4           &kp N5  &kp N6  &kp LS(SEMI)   &trans         &trans      &kp LS(INT1)  &kp LS(N8)  &kp LS(N9) &kp RBKT          &mt RIGHT_CONTROL BSLH
+&kp ESC              &kp N1           &jis_N2  &kp N3  &jis_minus                                &jis_grave    &jis_apos   &jis_semi  &kp LS(APOS)      &kp LS(INT3)
+&mt LEFT_CONTROL N0  &kp N4           &kp N5  &jis_N6  &kp LS(SEMI)   &trans         &trans      &kp LS(INT1)  &kp LS(N8)  &kp LS(N9) &kp RBKT          &mt RIGHT_CONTROL BSLH
 &mt LSHIFT LS(MINUS) &mt LEFT_ALT N7  &kp N8  &kp N9  &kp SLASH      &trans         &trans      &kp INT3      &kp EXCL    &kp QMARK  &mt RIGHT_ALT LT  &mt RSHIFT GT
 &trans               &trans           &trans  &trans  &trans         &trans         &trans      &trans                                                  &trans                        &trans
             >;
