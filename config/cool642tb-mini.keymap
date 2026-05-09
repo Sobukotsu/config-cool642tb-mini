@@ -80,14 +80,14 @@
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
         // Add N2, N6
-        jis_N2: jis_N2 {  // 2 (same) / @ → LBKT
+        jis_N2: jis_N2 {  // 2 (same) / AT_SIGN → LBKT
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp N2>, <&kp LBKT>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
-        jis_N6: jis_N6 {  // 6 (same) / ^ → EQUAL
+        jis_N6: jis_N6 {  // 6 (same) / CARET → EQUAL
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp N6>, <&kp EQUAL>;
