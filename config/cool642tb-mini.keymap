@@ -90,7 +90,7 @@
         jis_semi: jis_N6 {  // 6 (same) / ^ → EQUAL
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&kp N2>, <&kp EQUAL>;
+            bindings = <&kp N6>, <&kp EQUAL>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
