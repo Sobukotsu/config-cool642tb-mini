@@ -219,7 +219,7 @@
             bindings = <
 &kp ESC                 &kp N1               &jis_N2  &kp N3   &jis_minus                                &jis_grave    &jis_apos   &jis_semi  &kp LS(APOS)      &kp LS(INT3)
 &mt_jis_N0 LEFT_CONTROL &kp N4               &kp N5   &jis_N6  &kp LS(SEMI)   &trans         &trans      &kp LS(INT1)  &kp LS(N8)  &kp LS(N9) &kp RBKT          &mt RIGHT_CONTROL BSLH
-&mt LSHIFT LS(MINUS)    &mt_jis_N7 LEFT_ALT  &jis N8  &jis N9  &kp SLASH      &trans         &trans      &kp INT3      &kp EXCL    &kp QMARK  &mt RIGHT_ALT LT  &mt RSHIFT GT
+&mt LSHIFT LS(MINUS)    &mt_jis_N7 LEFT_ALT  &jis_N8  &jis_N9  &kp SLASH      &trans         &trans      &kp INT3      &kp EXCL    &kp QMARK  &mt RIGHT_ALT LT  &mt RSHIFT GT
 &trans                  &trans               &trans   &trans   &trans         &trans         &trans      &trans                                                 &trans
             >;
         };
