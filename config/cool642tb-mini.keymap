@@ -95,6 +95,51 @@
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
+        jis_N7: jis_N7 {  // 7 (same) / AMPERSAND → CARET
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp N7>, <&kp CARET>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        mt_jis_N7: mt_jis_N7 {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <1>;
+            flavor = "balanced";
+            tapping-term-ms = <200>;
+            quick-tap-ms = <0>;
+            bindings = <&kp>, <&jis_N7>;
+        };
+
+        jis_N8: jis_N8 {  // 8 (same) / ASTERISK → DOUBLE_QUOTES
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp N8>, <&kp DOUBLE_QUOTES>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        jis_N9: jis_N9 {  // 9 (same) / LEFT_PARENTHESIS → ASTERISK
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp N9>, <&kp ASTERISK>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        jis_N0: jis_N0 {  // 0 (same) / RIGHT_PARENTHESIS → LEFT_PARENTHESIS
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp N0>, <&kp LEFT_PARENTHESIS>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        mt_jis_N0: mt_jis_N0 {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <1>;
+            flavor = "balanced";
+            tapping-term-ms = <200>;
+            quick-tap-ms = <0>;
+            bindings = <&kp>, <&jis_N0>;
+        };
     };
     
      
@@ -172,10 +217,10 @@
 
         JIS_NUM { // 7: auto-activated via conditional_layers;
             bindings = <
-&kp ESC              &kp N1           &jis_N2  &kp N3  &jis_minus                                &jis_grave    &jis_apos   &jis_semi  &kp LS(APOS)      &kp LS(INT3)
-&mt LEFT_CONTROL N0  &kp N4           &kp N5  &jis_N6  &kp LS(SEMI)   &trans         &trans      &kp LS(INT1)  &kp LS(N8)  &kp LS(N9) &kp RBKT          &mt RIGHT_CONTROL BSLH
-&mt LSHIFT LS(MINUS) &mt LEFT_ALT N7  &kp N8  &kp N9  &kp SLASH      &trans         &trans      &kp INT3      &kp EXCL    &kp QMARK  &mt RIGHT_ALT LT  &mt RSHIFT GT
-&trans               &trans           &trans  &trans  &trans         &trans         &trans      &trans                                                  &trans
+&kp ESC                 &kp N1               &jis_N2  &kp N3   &jis_minus                                &jis_grave    &jis_apos   &jis_semi  &kp LS(APOS)      &kp LS(INT3)
+&mt_jis_N0 LEFT_CONTROL &kp N4               &kp N5   &jis_N6  &kp LS(SEMI)   &trans         &trans      &kp LS(INT1)  &kp LS(N8)  &kp LS(N9) &kp RBKT          &mt RIGHT_CONTROL BSLH
+&mt LSHIFT LS(MINUS)    &mt_jis_N7 LEFT_ALT  &jis N8  &jis N9  &kp SLASH      &trans         &trans      &kp INT3      &kp EXCL    &kp QMARK  &mt RIGHT_ALT LT  &mt RSHIFT GT
+&trans                  &trans               &trans   &trans   &trans         &trans         &trans      &trans                                                 &trans
             >;
         };
     };
