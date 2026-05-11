@@ -133,7 +133,7 @@
         jis_mt_N0: jis_mt_N0 {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&mt LEFT_ALT N0>, <&mt LEFT_PARENTHESIS>;
+            bindings = <&mt LEFT_CONTROL N0>, <&mt LEFT_CONTROL LEFT_PARENTHESIS>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
     };
@@ -214,8 +214,8 @@
         JIS_NUM { // 7: auto-activated via conditional_layers;
             bindings = <
 &kp ESC                 &kp N1               &jis_N2  &kp N3   &jis_minus                                &jis_grave    &jis_apos   &jis_semi  &kp LS(APOS)      &kp LS(INT3)
-&jis_mt_N0 LEFT_CONTROL &kp N4               &kp N5   &jis_N6  &kp LS(SEMI)   &trans         &trans      &kp LS(INT1)  &kp LS(N8)  &kp LS(N9) &kp RBKT          &mt RIGHT_CONTROL BSLH
-&mt LSHIFT LS(MINUS)    &jis_mt_N7 LEFT_ALT  &jis_N8  &jis_N9  &kp SLASH      &trans         &trans      &kp INT3      &kp EXCL    &kp QMARK  &mt RIGHT_ALT LT  &mt RSHIFT GT
+&jis_mt_N0              &kp N4               &kp N5   &jis_N6  &kp LS(SEMI)   &trans         &trans      &kp LS(INT1)  &kp LS(N8)  &kp LS(N9) &kp RBKT          &mt RIGHT_CONTROL BSLH
+&mt LSHIFT LS(MINUS)    &jis_mt_N7           &jis_N8  &jis_N9  &kp SLASH      &trans         &trans      &kp INT3      &kp EXCL    &kp QMARK  &mt RIGHT_ALT LT  &mt RSHIFT GT
 &trans                  &trans               &trans   &trans   &trans         &trans         &trans      &trans                                                 &trans
             >;
         };
